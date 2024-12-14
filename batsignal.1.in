@@ -42,6 +42,9 @@ Battery danger LEVEL (default 2). 0 disables this level
 .B \-f LEVEL
 Battery full LEVEL (default 0). 0 disables this level
 .TP
+.B \-q
+Show the battery full notification only once per charge cycle
+.TP
 .B \-p
 Show a message when the battery begins charging or discharging
 .TP

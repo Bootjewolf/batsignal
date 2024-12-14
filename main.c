@@ -55,6 +55,7 @@ Options:\n\
                    (default: 2)\n\
     -f LEVEL       full battery LEVEL\n\
                    (default: disabled)\n\
+    -q             show battery full notification once\n\
     -p             show message when battery begins charging/discharging\n\
     -W MESSAGE     show MESSAGE when battery is at warning level\n\
     -C MESSAGE     show MESSAGE when battery is at critical level\n\
