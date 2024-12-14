@@ -143,7 +143,7 @@ void parse_args(int argc, char *argv[], Config *config)
   signed int c;
   optind = 1;
 
-  while ((c = getopt(argc, argv, ":hvboiew:c:d:f:pW:C:D:F:P:U:M:Nn:m:a:I:")) != -1) {
+  while ((c = getopt(argc, argv, ":hvboiew:c:d:f:qpW:C:D:F:P:U:M:Nn:m:a:I:")) != -1) {
     switch (c) {
       case 'h':
         config->help = true;
@@ -172,6 +172,9 @@ void parse_args(int argc, char *argv[], Config *config)
       case 'f':
         config->full = strtoul(optarg, NULL, 10);
         config->fixed = true;
+        break;
+      case 'q':
+        config->show_battery_full_once = true;
         break;
       case 'p':
         config->show_charging_msg = 1;

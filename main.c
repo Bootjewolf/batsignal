@@ -105,6 +105,7 @@ int main(int argc, char *argv[])
     .battery_required = true,
     .show_notifications = true,
     .show_charging_msg = false,
+    .show_battery_full_once = false,
     .help = false,
     .version = false,
     .battery_names = NULL,
@@ -229,7 +230,9 @@ int main(int argc, char *argv[])
         notify(config.chargingmsg, NOTIFY_URGENCY_NORMAL, battery);
 
       } else {
-        battery.state = STATE_AC;
+        if (!config.show_battery_full_once || battery.state != STATE_FULL) {
+          battery.state = STATE_AC;
+        }
         close_notification();
       }
     }

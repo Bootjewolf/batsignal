@@ -15,6 +15,7 @@ typedef struct Config {
   bool battery_required;
   bool show_notifications;
   bool show_charging_msg;
+  bool show_battery_full_once;
   bool help;
   bool version;
 
